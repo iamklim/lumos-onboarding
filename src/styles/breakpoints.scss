@@ -1,0 +1,14 @@
+$breakpoint-mobile-large: 480px;
+$breakpoint-tablet: 768px;
+
+@mixin mobileLg {
+  @media only screen and (min-width: $breakpoint-mobile-large) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}

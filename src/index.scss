@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
 
-input,
-textarea {
-  outline: none;
-}
-
 html {
   height: 100%;
 }
@@ -16,10 +11,33 @@ body {
   font-family: Inter, sans-serif;
   font-size: 18px;
   line-height: 1.33;
+  background: #1d0f2a;
   color: #ffffff;
   overflow-x: hidden;
 }
 
 #root {
   height: 100%;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+button {
+  width: auto;
+  cursor: pointer;
 }

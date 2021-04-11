@@ -1,7 +1,7 @@
 import SingleSelectQuestion from "../../single-select-question/single-select-question";
 import { useStateValue } from "../../../state/state";
 
-function Gender() {
+function WakeUp() {
   const [
     {
       quiz: { step },
@@ -9,10 +9,10 @@ function Gender() {
     dispatch,
   ] = useStateValue();
 
-  const onClick = (newGender) => {
+  const onClick = (newWakeUp) => {
     dispatch({
-      type: "setGender",
-      newGender,
+      type: "setWakeUp",
+      newWakeUp,
     });
     dispatch({
       type: "setStep",
@@ -22,16 +22,16 @@ function Gender() {
 
   return (
     <SingleSelectQuestion
-      title="How do you identify?"
-      subtitle="We may provide gender specific recommendations"
+      title="When do you wake up generally?"
       answerOptions={[
-        { title: "Woman", value: "woman" },
-        { title: "Man", value: "man" },
-        { title: "Non-binary", value: "nonBinary" },
+        { title: "7:00 AM", value: "7Am" },
+        { title: "8:00 AM", value: "8Am" },
+        { title: "9:00 AM", value: "9Am" },
+        { title: "10:00 AM or later", value: "10AmOrLater" },
       ]}
       onClick={onClick}
     />
   );
 }
 
-export default Gender;
+export default WakeUp;

@@ -25,10 +25,10 @@ function Age() {
       title="What is your age?"
       subtitle="We’ll personalize recommendations based on your selection"
       answerOptions={[
-        { title: "18 - 24", value: "18 - 24" },
-        { title: "25 - 34", value: "25 - 34" },
-        { title: "35 - 44", value: "35 - 44" },
-        { title: "45+", value: "45+" },
+        { title: "18 - 24", value: "18_24" },
+        { title: "25 - 34", value: "25_34" },
+        { title: "35 - 44", value: "35_44" },
+        { title: "45+", value: "45" },
       ]}
       onClick={onClick}
     />

@@ -5,6 +5,11 @@ const reducer = (state, action) => {
         ...state,
         quiz: { ...state.quiz, step: action.newStep },
       };
+    case "setName":
+      return {
+        ...state,
+        quiz: { ...state.quiz, name: action.newName },
+      };
     case "setGender":
       return {
         ...state,
@@ -14,6 +19,16 @@ const reducer = (state, action) => {
       return {
         ...state,
         quiz: { ...state.quiz, age: action.newAge },
+      };
+    case "setWakeUp":
+      return {
+        ...state,
+        quiz: { ...state.quiz, wakeUp: action.newWakeUp },
+      };
+    case "setEmail":
+      return {
+        ...state,
+        quiz: { ...state.quiz, email: action.newEmail },
       };
 
     default:
