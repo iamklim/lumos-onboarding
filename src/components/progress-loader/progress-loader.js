@@ -15,10 +15,10 @@ function ProgressLoader({ start = 0, finish = 100, onFinish }) {
   );
 
   useEffect(() => {
-    if (isAnimationFinished) {
+    if (isAnimationFinished && onFinish) {
       setTimeout(() => onFinish(), 1000);
     }
-  }, [isAnimationFinished]);
+  }, [isAnimationFinished, onFinish]);
 
   return (
     <div className="progress-loader">
