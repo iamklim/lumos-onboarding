@@ -1,0 +1,62 @@
+@import "../../styles/breakpoints";
+
+.input-question__head {
+  margin-bottom: 50px;
+
+  @include mobileLg {
+    text-align: center;
+  }
+}
+
+.input-question__title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+
+  b {
+    color: #ffe000;
+  }
+}
+
+.input-question__subtitle {
+  margin-top: 6px;
+
+  b {
+    font-weight: bold;
+    color: #ffe000;
+  }
+}
+
+.input-question__input {
+  display: block;
+  border-style: none none solid;
+  border-width: 0 0 1px;
+  border-color: transparent transparent #4288e0;
+  background-color: #136bd9;
+  height: 24px;
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.input-question__btn {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  padding: 17px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #136bd9;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
