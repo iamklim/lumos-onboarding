@@ -1,6 +1,12 @@
 import "./single-select-question.scss";
+import sleep from "../../utils/sleep";
 
 function SingleSelectQuestion({ title, subtitle, answerOptions, onClick }) {
+  const onButtonClick = async (value) => {
+    await sleep(400);
+    onClick(value);
+  };
+
   return (
     <div className="single-select-question">
       <div className="single-select-question__head">
@@ -13,8 +19,11 @@ function SingleSelectQuestion({ title, subtitle, answerOptions, onClick }) {
         <button
           className="single-select-question__answer"
           key={`answer-option-${index}`}
-          onClick={() => onClick(item.value)}
+          onClick={() => onButtonClick(item.value)}
         >
+          {item.icon && (
+            <span className="single-select-question__icon">{item.icon}</span>
+          )}
           <span className="single-select-question__answer-title">
             {item.title}
           </span>

@@ -25,9 +25,9 @@ function Gender() {
       title="How do you identify?"
       subtitle="We may provide gender specific recommendations"
       answerOptions={[
-        { title: "Woman", value: "woman" },
-        { title: "Man", value: "man" },
-        { title: "Non-binary", value: "nonBinary" },
+        { title: "Woman", value: "woman", icon: "👩" },
+        { title: "Man", value: "man", icon: "👨" },
+        { title: "Non-binary", value: "nonBinary", icon: "🧑" },
       ]}
       onClick={onClick}
     />

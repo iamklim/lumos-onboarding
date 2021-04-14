@@ -1,5 +1,6 @@
 import "./input-question.scss";
 import { useState } from "react";
+import sleep from "../../utils/sleep";
 
 function InputQuestion({ title, subtitle, inputType = "text", onSubmit }) {
   const [value, setValue] = useState("");
@@ -9,13 +10,19 @@ function InputQuestion({ title, subtitle, inputType = "text", onSubmit }) {
     setValue(e.target.value);
   };
 
+  const onFormSubmit = async (e) => {
+    e.preventDefault();
+    await sleep(400);
+    onSubmit(value);
+  };
+
   return (
     <div className="input-question">
       <div className="input-question__head">
         <h1 className="input-question__title">{title}</h1>
         {subtitle && <h2 className="input-question__subtitle">{subtitle}</h2>}
       </div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onFormSubmit}>
         <input
           className="input-question__input"
           value={value}
