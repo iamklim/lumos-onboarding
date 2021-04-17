@@ -1,7 +1,7 @@
 import SingleSelectQuestion from "../../single-select-question/single-select-question";
 import { useStateValue } from "../../../state/state";
 
-function WakeUp() {
+function FitnessLevel() {
   const [
     {
       quiz: { step },
@@ -9,10 +9,10 @@ function WakeUp() {
     dispatch,
   ] = useStateValue();
 
-  const onClick = (newWakeUp) => {
+  const onClick = (newFitnessLevel) => {
     dispatch({
-      type: "setWakeUp",
-      newWakeUp,
+      type: "setFitnessLevel",
+      newFitnessLevel,
     });
     dispatch({
       type: "setStep",
@@ -22,16 +22,15 @@ function WakeUp() {
 
   return (
     <SingleSelectQuestion
-      title="When do you wake up generally?"
+      title="How often do you exercise or play sports?"
       answerOptions={[
-        { title: "7:00 AM", value: "7Am", icon: "🐦" },
-        { title: "8:00 AM", value: "8Am", icon: "🕗" },
-        { title: "9:00 AM", value: "9Am", icon: "⏰" },
-        { title: "Other", value: "Other", icon: "😴" },
+        { title: "3 to 5 times a week", value: "3_5", icon: "🏅" },
+        { title: "1 to 2 workouts a week", value: "1_2", icon: "👟" },
+        { title: "I’m just getting in the groove", value: "rare", icon: "🦦" },
       ]}
       onClick={onClick}
     />
   );
 }
 
-export default WakeUp;
+export default FitnessLevel;

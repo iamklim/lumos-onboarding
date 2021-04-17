@@ -1,7 +1,7 @@
 import SingleSelectQuestion from "../../single-select-question/single-select-question";
 import { useStateValue } from "../../../state/state";
 
-function WakeUp() {
+function Delays() {
   const [
     {
       quiz: { step },
@@ -9,10 +9,10 @@ function WakeUp() {
     dispatch,
   ] = useStateValue();
 
-  const onClick = (newWakeUp) => {
+  const onClick = (newDelays) => {
     dispatch({
-      type: "setWakeUp",
-      newWakeUp,
+      type: "setDelays",
+      newDelays,
     });
     dispatch({
       type: "setStep",
@@ -22,16 +22,15 @@ function WakeUp() {
 
   return (
     <SingleSelectQuestion
-      title="When do you wake up generally?"
+      title="How often do you delay what you know you should do?"
       answerOptions={[
-        { title: "7:00 AM", value: "7Am", icon: "🐦" },
-        { title: "8:00 AM", value: "8Am", icon: "🕗" },
-        { title: "9:00 AM", value: "9Am", icon: "⏰" },
-        { title: "Other", value: "Other", icon: "😴" },
+        { title: "Almost always", value: "always", icon: "⌛" },
+        { title: "Sometimes", value: "sometimes", icon: "⏳" },
+        { title: "Almost never", value: "never", icon: "⏱️" },
       ]}
       onClick={onClick}
     />
   );
 }
 
-export default WakeUp;
+export default Delays;

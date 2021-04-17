@@ -6,15 +6,35 @@ import LoaderOne from "./questions/loader-one";
 import LoaderTwo from "./questions/loader-two";
 import Email from "./questions/email";
 import { useStateValue } from "../../state/state";
+import MainGoal from "./questions/main-goal";
+import FocusOnPastOrFuture from "./questions/focus-on-past-or-future";
+import Obstacles from "./questions/obstacles";
+import FitnessLevel from "./questions/fitness-level";
+import WorkSchedule from "./questions/work-schedule";
+import SleepQuality from "./questions/sleep-quality";
+import WaterIntake from "./questions/water-intake";
+import BadHabits from "./questions/bad-habits";
+import Delays from "./questions/delays";
+import DayStructure from "./questions/day-structure";
 
 const STEP_TO_QUESTION_MAP = {
-  1: <Name />,
-  2: <Gender />,
+  1: <Gender />,
+  2: <WakeUp />,
   3: <Age />,
-  4: <LoaderOne />,
-  5: <WakeUp />,
-  6: <LoaderTwo />,
-  7: <Email />,
+  4: <Name />,
+  5: <MainGoal />,
+  6: <FocusOnPastOrFuture />,
+  7: <Obstacles />,
+  8: <FitnessLevel />,
+  9: <WorkSchedule />,
+  10: <SleepQuality />,
+  11: <WaterIntake />,
+  12: <BadHabits />,
+  13: <Delays />,
+  14: <LoaderOne />,
+  15: <DayStructure />,
+  16: <LoaderTwo />,
+  17: <Email />,
 };
 
 function Quiz() {
