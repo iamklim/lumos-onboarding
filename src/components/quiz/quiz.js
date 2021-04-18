@@ -1,3 +1,4 @@
+import "./quiz.scss";
 import Age from "./questions/age";
 import Gender from "./questions/gender";
 import Name from "./questions/name";
@@ -16,6 +17,7 @@ import WaterIntake from "./questions/water-intake";
 import BadHabits from "./questions/bad-habits";
 import Delays from "./questions/delays";
 import DayStructure from "./questions/day-structure";
+import CheckoutQuestion from "./questions/checkout";
 
 const STEP_TO_QUESTION_MAP = {
   1: <Gender />,
@@ -35,6 +37,7 @@ const STEP_TO_QUESTION_MAP = {
   15: <DayStructure />,
   16: <LoaderTwo />,
   17: <Email />,
+  18: <CheckoutQuestion />,
 };
 
 function Quiz() {
@@ -45,7 +48,13 @@ function Quiz() {
     ,
   ] = useStateValue();
 
-  return <div className="quiz">{STEP_TO_QUESTION_MAP[step]}</div>;
+  const isCheckout = step === 18;
+
+  return (
+    <div className={isCheckout ? "quizCheckout" : "quizQuestion"}>
+      <div className="container">{STEP_TO_QUESTION_MAP[step]} </div>
+    </div>
+  );
 }
 
 export default Quiz;

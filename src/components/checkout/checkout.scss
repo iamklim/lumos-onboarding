@@ -1,0 +1,178 @@
+.checkoutIcon {
+  font-size: 60px;
+  text-align: center;
+  margin: 0 auto 16px;
+}
+
+.checkoutButton {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 24px;
+  padding-top: 15px;
+  padding-bottom: 13px;
+  border-radius: 99px;
+  background-color: #0071ff;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+
+  b {
+    font-weight: 800;
+  }
+}
+
+.checkoutText {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+
+  strong {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+  }
+
+  b {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+.checkoutCards {
+  padding-top: 24px;
+  margin-bottom: 28px;
+}
+
+.checkoutCardsTitle {
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.checkoutCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 78px;
+  min-height: 78px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+
+.checkoutCardSelected {
+  @extend .checkoutCard;
+}
+
+.checkoutCardLabel {
+  position: absolute;
+  left: 16px;
+  bottom: calc(100% - 12px);
+  padding: 4px 8px;
+  background: #827791;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+
+  .checkoutCardSelected & {
+    background-image: linear-gradient(180deg, #e20dbe, #e4004f);
+  }
+}
+
+.checkoutCardPeriod {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #4c3b62;
+  border-radius: 8px 0 0 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #827791;
+  color: #827791;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+
+  .checkoutCardSelected & {
+    color: #ffffff;
+    background: #292b59;
+    border-color: #0071ff;
+  }
+}
+
+.checkoutCardPrice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #4c3b62;
+  border-radius: 0 8px 8px 0;
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+  border-color: #827791;
+  color: #827791;
+  font-weight: 700;
+  font-size: 16px;
+
+  .checkoutCardSelected & {
+    color: #ffffff;
+    background: #0071ff;
+    border-color: #0071ff;
+  }
+}
+
+.moneyBack {
+  position: relative;
+  border-radius: 14px;
+  padding: 12px;
+  background-color: #292b59;
+  background-image: linear-gradient(
+    165deg,
+    rgba(94, 60, 180, 0.5),
+    rgba(94, 60, 180, 0.3)
+  );
+  margin-bottom: 40px;
+}
+
+.moneyBackContent {
+  border: 2px solid #45e2ad;
+  border-radius: 12px;
+  padding: 24px 16px 40px;
+}
+
+.moneyBackTitle {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.moneyBackText {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.moneyBackStamp {
+  position: absolute;
+  right: 34px;
+  bottom: -40px;
+  fill: #45e2ad;
+}

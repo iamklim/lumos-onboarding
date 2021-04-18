@@ -11,7 +11,7 @@ function ProgressLoader({ start = 0, finish = 100, onFinish }) {
     () => {
       setProgress(progress + 1);
     },
-    isAnimationFinished ? null : 100
+    isAnimationFinished ? null : 70
   );
 
   useEffect(() => {

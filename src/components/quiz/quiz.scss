@@ -1,0 +1,22 @@
+.quiz {
+  display: flex;
+  min-height: 100%;
+}
+
+.quizQuestion {
+  @extend .quiz;
+  background: #136bd9;
+  align-items: center;
+}
+
+.quizCheckout {
+  @extend .quiz;
+  background: linear-gradient(180deg, #45204b, #342653 73%);
+}
+
+.container {
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}

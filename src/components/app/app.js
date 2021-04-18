@@ -4,9 +4,7 @@ import Quiz from "../quiz/quiz";
 function App() {
   return (
     <div className="app">
-      <div className="container">
-        <Quiz />
-      </div>
+      <Quiz />
     </div>
   );
 }
