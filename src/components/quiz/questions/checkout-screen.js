@@ -1,7 +1,7 @@
 import { useStateValue } from "../../../state/state";
 import Checkout from "../../checkout/checkout";
 
-function CheckoutQuestion() {
+function CheckoutScreen() {
   const [
     {
       quiz: { step },
@@ -23,4 +23,4 @@ function CheckoutQuestion() {
   return <Checkout onPlanSelect={onPlanSelect} />;
 }
 
-export default CheckoutQuestion;
+export default CheckoutScreen;

@@ -17,7 +17,8 @@ import WaterIntake from "./questions/water-intake";
 import BadHabits from "./questions/bad-habits";
 import Delays from "./questions/delays";
 import DayStructure from "./questions/day-structure";
-import CheckoutQuestion from "./questions/checkout";
+import CheckoutScreen from "./questions/checkout-screen";
+import ThankYouScreen from "./questions/thank-you-screen";
 
 const STEP_TO_QUESTION_MAP = {
   1: <Gender />,
@@ -37,7 +38,8 @@ const STEP_TO_QUESTION_MAP = {
   15: <DayStructure />,
   16: <LoaderTwo />,
   17: <Email />,
-  18: <CheckoutQuestion />,
+  18: <CheckoutScreen />,
+  19: <ThankYouScreen />,
 };
 
 function Quiz() {
