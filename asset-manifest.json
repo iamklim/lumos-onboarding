@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/lumos/static/css/main.baaf47ff.chunk.css",
-    "main.js": "/lumos/static/js/main.7171cc49.chunk.js",
-    "main.js.map": "/lumos/static/js/main.7171cc49.chunk.js.map",
-    "runtime-main.js": "/lumos/static/js/runtime-main.91e7d2b3.js",
-    "runtime-main.js.map": "/lumos/static/js/runtime-main.91e7d2b3.js.map",
-    "static/js/2.d34ee701.chunk.js": "/lumos/static/js/2.d34ee701.chunk.js",
-    "static/js/2.d34ee701.chunk.js.map": "/lumos/static/js/2.d34ee701.chunk.js.map",
-    "index.html": "/lumos/index.html",
-    "static/css/main.baaf47ff.chunk.css.map": "/lumos/static/css/main.baaf47ff.chunk.css.map",
-    "static/js/2.d34ee701.chunk.js.LICENSE.txt": "/lumos/static/js/2.d34ee701.chunk.js.LICENSE.txt"
+    "main.css": "/lumos-onboarding/static/css/main.baaf47ff.chunk.css",
+    "main.js": "/lumos-onboarding/static/js/main.7171cc49.chunk.js",
+    "main.js.map": "/lumos-onboarding/static/js/main.7171cc49.chunk.js.map",
+    "runtime-main.js": "/lumos-onboarding/static/js/runtime-main.3ff4a316.js",
+    "runtime-main.js.map": "/lumos-onboarding/static/js/runtime-main.3ff4a316.js.map",
+    "static/js/2.d34ee701.chunk.js": "/lumos-onboarding/static/js/2.d34ee701.chunk.js",
+    "static/js/2.d34ee701.chunk.js.map": "/lumos-onboarding/static/js/2.d34ee701.chunk.js.map",
+    "index.html": "/lumos-onboarding/index.html",
+    "static/css/main.baaf47ff.chunk.css.map": "/lumos-onboarding/static/css/main.baaf47ff.chunk.css.map",
+    "static/js/2.d34ee701.chunk.js.LICENSE.txt": "/lumos-onboarding/static/js/2.d34ee701.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.91e7d2b3.js",
+    "static/js/runtime-main.3ff4a316.js",
     "static/js/2.d34ee701.chunk.js",
     "static/css/main.baaf47ff.chunk.css",
     "static/js/main.7171cc49.chunk.js"
