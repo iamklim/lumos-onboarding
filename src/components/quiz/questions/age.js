@@ -31,6 +31,7 @@ function Age() {
         { title: "45+", value: "45+" },
       ]}
       onClick={onClick}
+      eventName="quiz_age"
     />
   );
 }

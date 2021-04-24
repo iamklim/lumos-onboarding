@@ -30,6 +30,7 @@ function BadHabits() {
         { title: "Other", value: "other", icon: "🤷" },
       ]}
       onClick={onClick}
+      eventName="quiz_bad-habits"
     />
   );
 }

@@ -30,6 +30,7 @@ function FocusOnPastOrFuture() {
         { title: "All of the time", value: "always", icon: "🔭" },
       ]}
       onClick={onClick}
+      eventName="quiz_focus_on_past"
     />
   );
 }

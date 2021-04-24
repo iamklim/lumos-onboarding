@@ -30,6 +30,7 @@ function WaterIntake() {
         { title: "More than 6 glasses", value: "high", icon: "🤘" },
       ]}
       onClick={onClick}
+      eventName="quiz_water_intake"
     />
   );
 }

@@ -29,6 +29,7 @@ function Delays() {
         { title: "Almost never", value: "never", icon: "⏱️" },
       ]}
       onClick={onClick}
+      eventName="quiz_day_delays"
     />
   );
 }

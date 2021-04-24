@@ -1,8 +1,9 @@
 import "./checkout.scss";
 import { useStateValue } from "../../state/state";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import pushAnalytics from "../../utils/push-analytics";
 
-function Checkout({ onPlanSelect }) {
+function Checkout({ onSubmit, eventName }) {
   const checkoutCardsRef = useRef(null);
   const [
     {
@@ -26,12 +27,25 @@ function Checkout({ onPlanSelect }) {
   const nextYear = currentDate.getFullYear() + 1;
 
   const onTopButtonClick = () => {
+    pushAnalytics(`checkout_top_button`);
     checkoutCardsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const onBottomButtonClick = () => {
-    onPlanSelect(planSelected);
+    pushAnalytics(`plan_submit_${planSelected}`);
+    onSubmit(planSelected);
   };
+
+  const onPlanSelect = (planName) => {
+    pushAnalytics(`plan_select_${planName}`);
+    setPlanSelected(planName);
+  };
+
+  useEffect(() => {
+    if (eventName) {
+      pushAnalytics(eventName);
+    }
+  }, [eventName]);
 
   return (
     <div className="checkout">
@@ -74,7 +88,7 @@ function Checkout({ onPlanSelect }) {
 
         <div
           className={isOneYearPlan ? "checkoutCardSelected" : "checkoutCard"}
-          onClick={() => setPlanSelected("1year")}
+          onClick={() => onPlanSelect("1year")}
         >
           <div className="checkoutCardLabel">SAVE 50%</div>
           <div className="checkoutCardPeriod">1 YEAR PLAN</div>
@@ -82,7 +96,7 @@ function Checkout({ onPlanSelect }) {
         </div>
         <div
           className={isThreeMonthPlan ? "checkoutCardSelected" : "checkoutCard"}
-          onClick={() => setPlanSelected("3month")}
+          onClick={() => onPlanSelect("3month")}
         >
           <div className="checkoutCardLabel">SAVE 25%</div>
           <div className="checkoutCardPeriod">3 MONTH PLAN</div>
@@ -90,7 +104,7 @@ function Checkout({ onPlanSelect }) {
         </div>
         <div
           className={isOneMonthPlan ? "checkoutCardSelected" : "checkoutCard"}
-          onClick={() => setPlanSelected("1month")}
+          onClick={() => onPlanSelect("1month")}
         >
           <div className="checkoutCardPeriod">1 MONTH PLAN</div>
           <div className="checkoutCardPrice">$4.99</div>

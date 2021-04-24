@@ -29,6 +29,7 @@ function FitnessLevel() {
         { title: "I’m just getting in the groove", value: "rare", icon: "🦦" },
       ]}
       onClick={onClick}
+      eventName="quiz_fitness_level"
     />
   );
 }

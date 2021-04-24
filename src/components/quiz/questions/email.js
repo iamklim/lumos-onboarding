@@ -42,6 +42,7 @@ function Email() {
       subtitle="✔ no spam, we promise"
       onSubmit={onSubmit}
       inputType="email"
+      eventName="quiz_email"
     />
   );
 }

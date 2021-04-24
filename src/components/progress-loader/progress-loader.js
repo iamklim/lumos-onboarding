@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { CircleProgress } from "react-gradient-progress";
 import useInterval from "../../hooks/use-interval";
 import "./progress-loader.scss";
+import pushAnalytics from "../../utils/push-analytics";
 
-function ProgressLoader({ start = 0, finish = 100, onFinish }) {
+function ProgressLoader({ start = 0, finish = 100, onFinish, eventName }) {
   const [progress, setProgress] = useState(start);
   const isAnimationFinished = progress === finish;
 
@@ -19,6 +20,12 @@ function ProgressLoader({ start = 0, finish = 100, onFinish }) {
       setTimeout(() => onFinish(), 1000);
     }
   }, [isAnimationFinished, onFinish]);
+
+  useEffect(() => {
+    if (eventName) {
+      pushAnalytics(eventName);
+    }
+  }, [eventName]);
 
   return (
     <div className="progress-loader">

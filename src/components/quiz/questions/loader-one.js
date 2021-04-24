@@ -16,7 +16,14 @@ function LoaderOne() {
     });
   };
 
-  return <ProgressLoader start={0} finish={75} onFinish={onFinish} />;
+  return (
+    <ProgressLoader
+      start={0}
+      finish={75}
+      onFinish={onFinish}
+      eventName="quiz_loader_one"
+    />
+  );
 }
 
 export default LoaderOne;

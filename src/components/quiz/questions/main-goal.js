@@ -30,6 +30,7 @@ function MainGoal() {
         { title: "More calm", value: "calm", icon: "😌" },
       ]}
       onClick={onClick}
+      eventName="quiz_main_goal"
     />
   );
 }

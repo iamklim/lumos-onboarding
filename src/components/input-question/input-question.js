@@ -1,8 +1,15 @@
 import "./input-question.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import sleep from "../../utils/sleep";
+import pushAnalytics from "../../utils/push-analytics";
 
-function InputQuestion({ title, subtitle, inputType = "text", onSubmit }) {
+function InputQuestion({
+  title,
+  subtitle,
+  inputType = "text",
+  onSubmit,
+  eventName,
+}) {
   const [value, setValue] = useState("");
   const isBtnDisabled = !value.trim().length;
 
@@ -15,6 +22,12 @@ function InputQuestion({ title, subtitle, inputType = "text", onSubmit }) {
     await sleep(400);
     onSubmit(value);
   };
+
+  useEffect(() => {
+    if (eventName) {
+      pushAnalytics(eventName);
+    }
+  }, [eventName]);
 
   return (
     <div className="input-question">

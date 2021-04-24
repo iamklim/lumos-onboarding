@@ -30,6 +30,7 @@ function WakeUp() {
         { title: "Other", value: "Other", icon: "😴" },
       ]}
       onClick={onClick}
+      eventName="quiz_wake_up"
     />
   );
 }

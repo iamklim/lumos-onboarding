@@ -1,13 +1,21 @@
 import "./thank-you.scss";
 import { useStateValue } from "../../state/state";
+import { useEffect } from "react";
+import pushAnalytics from "../../utils/push-analytics";
 
-function ThankYou() {
+function ThankYou({ eventName }) {
   const [
     {
       quiz: { name },
     },
     ,
   ] = useStateValue();
+
+  useEffect(() => {
+    if (eventName) {
+      pushAnalytics(eventName);
+    }
+  }, [eventName]);
 
   return (
     <div className="thank-you">

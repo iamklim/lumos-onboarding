@@ -30,6 +30,7 @@ function WorkSchedule() {
         { title: "I’m retired", value: "retired", icon: "🧓" },
       ]}
       onClick={onClick}
+      eventName="quiz_work_schedule"
     />
   );
 }

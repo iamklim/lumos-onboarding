@@ -30,6 +30,7 @@ function Obstacles() {
         { title: "Myself", value: "myself", icon: "🙋" },
       ]}
       onClick={onClick}
+      eventName="quiz_obstacles"
     />
   );
 }

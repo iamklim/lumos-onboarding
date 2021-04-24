@@ -43,6 +43,7 @@ function SleepQuality() {
         },
       ]}
       onClick={onClick}
+      eventName="quiz_sleep_quality"
     />
   );
 }

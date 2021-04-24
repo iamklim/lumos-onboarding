@@ -9,7 +9,7 @@ function CheckoutScreen() {
     dispatch,
   ] = useStateValue();
 
-  const onPlanSelect = (newPlan) => {
+  const onSubmit = (newPlan) => {
     dispatch({
       type: "setPlan",
       newPlan,
@@ -20,7 +20,7 @@ function CheckoutScreen() {
     });
   };
 
-  return <Checkout onPlanSelect={onPlanSelect} />;
+  return <Checkout onSubmit={onSubmit} eventName="quiz_checkout" />;
 }
 
 export default CheckoutScreen;

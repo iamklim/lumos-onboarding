@@ -1,11 +1,25 @@
 import "./single-select-question.scss";
 import sleep from "../../utils/sleep";
+import { useEffect } from "react";
+import pushAnalytics from "../../utils/push-analytics";
 
-function SingleSelectQuestion({ title, subtitle, answerOptions, onClick }) {
+function SingleSelectQuestion({
+  title,
+  subtitle,
+  answerOptions,
+  onClick,
+  eventName,
+}) {
   const onButtonClick = async (value) => {
     await sleep(400);
     onClick(value);
   };
+
+  useEffect(() => {
+    if (eventName) {
+      pushAnalytics(eventName);
+    }
+  }, [eventName]);
 
   return (
     <div className="single-select-question">

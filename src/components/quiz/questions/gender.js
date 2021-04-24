@@ -30,6 +30,7 @@ function Gender() {
         { title: "Non-binary", value: "nonBinary", icon: "🧑" },
       ]}
       onClick={onClick}
+      eventName="quiz_gender"
     />
   );
 }

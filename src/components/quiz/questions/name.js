@@ -1,5 +1,6 @@
 import { useStateValue } from "../../../state/state";
 import InputQuestion from "../../input-question/input-question";
+import SingleSelectQuestion from "../../single-select-question/single-select-question";
 
 function Name() {
   const [
@@ -24,6 +25,7 @@ function Name() {
     <InputQuestion
       title="Share your name so we can personalize your plan"
       onSubmit={onSubmit}
+      eventName="quiz_name"
     />
   );
 }

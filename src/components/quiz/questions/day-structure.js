@@ -37,6 +37,7 @@ function DayStructure() {
         },
       ]}
       onClick={onClick}
+      eventName="quiz_day_structure"
     />
   );
 }
