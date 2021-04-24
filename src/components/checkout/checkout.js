@@ -2,6 +2,7 @@ import "./checkout.scss";
 import { useStateValue } from "../../state/state";
 import { useEffect, useRef, useState } from "react";
 import pushAnalytics from "../../utils/push-analytics";
+import redPanda from "./red-panda.png";
 
 function Checkout({ onSubmit, eventName }) {
   const checkoutCardsRef = useRef(null);
@@ -49,40 +50,26 @@ function Checkout({ onSubmit, eventName }) {
 
   return (
     <div className="checkout">
-      <div className="checkoutIcon">🔮</div>
+      <img className="checkoutImage" src={redPanda} alt="Red Panda" />
+      <p className="checkoutText">
+        <strong>Hi, {name}!</strong>
+        <br />
+        <br />
+        I’m Lumos the Red Panda! A digital friend on your way to better you. I’m
+        here to help you{" "}
+        <b>to build good habits and increase quality of living</b>.
+        <br />
+        <br />
+        It’s the time to make first steps to future you! I believe you have a
+        strong personality and can start changing right now with your{" "}
+        <b>personal plan</b>.
+        <br />
+        <br />
+        <b>Let’s start this journey together!</b>
+      </p>
       <button className="checkoutButton" onClick={onTopButtonClick}>
         GET MY PLAN
       </button>
-      <p className="checkoutText">
-        <strong>{name}, do you copy?</strong>
-        <br />
-        <br />
-        It’s me, future {name}. I’m calling from {nextYear} because today is an
-        important day for you — for us.
-        <br />
-        <br />
-        <b>
-          {currentDateFormatted} is the day we decided to change our lives for
-          the better.
-        </b>
-        <br />
-        <br />
-        I have excellent news: I’m healthy, in great shape, and worry-free,
-        thanks to the choices you’re making.
-        <br />
-        <br />
-        I know these are difficult times, but I promise you that it gets better.
-        <br />
-        <br />
-        I’ll be with you every step of the way
-        <br />
-        <br />
-        <em>
-          See you soon,
-          <br />
-          Future {name}
-        </em>
-      </p>
       <div className="checkoutCards" ref={checkoutCardsRef}>
         <h2 className="checkoutCardsTitle">Choose your plan</h2>
 
@@ -90,7 +77,7 @@ function Checkout({ onSubmit, eventName }) {
           className={isOneYearPlan ? "checkoutCardSelected" : "checkoutCard"}
           onClick={() => onPlanSelect("1year")}
         >
-          <div className="checkoutCardLabel">SAVE 50%</div>
+          <div className="checkoutCardLabel">Save 50%</div>
           <div className="checkoutCardPeriod">1 YEAR PLAN</div>
           <div className="checkoutCardPrice">$39.99</div>
         </div>
@@ -98,7 +85,7 @@ function Checkout({ onSubmit, eventName }) {
           className={isThreeMonthPlan ? "checkoutCardSelected" : "checkoutCard"}
           onClick={() => onPlanSelect("3month")}
         >
-          <div className="checkoutCardLabel">SAVE 25%</div>
+          <div className="checkoutCardLabel">Save 25%</div>
           <div className="checkoutCardPeriod">3 MONTH PLAN</div>
           <div className="checkoutCardPrice">$14.99</div>
         </div>
