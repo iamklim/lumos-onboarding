@@ -5,13 +5,13 @@
 
 .quizQuestion {
   @extend .quiz;
-  background: #136bd9;
+  background: #F7F9EF;
   align-items: center;
 }
 
 .quizCheckout {
   @extend .quiz;
-  background: linear-gradient(180deg, #45204b, #342653 73%);
+  background: #F7F9EF;
 }
 
 .container {

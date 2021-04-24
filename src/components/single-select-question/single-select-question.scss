@@ -14,7 +14,7 @@
   line-height: 28px;
 
   b {
-    color: #ffe000;
+    color: #E6957E;
   }
 }
 
@@ -23,7 +23,7 @@
 
   b {
     font-weight: bold;
-    color: #ffe000;
+    color: #E6957E;
   }
 }
 
@@ -33,13 +33,12 @@
   align-items: center;
   margin: 0 auto 8px;
   padding: 16px;
-  background: #ffe000;
+  background: #91B386;
   width: 100%;
   min-height: 90px;
   max-width: 380px;
   border-radius: 8px;
   text-align: left;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
 
   &:last-child {
     margin-bottom: 0;
@@ -53,6 +52,6 @@
 
 .single-select-question__answer-title {
   font-weight: 600;
-  color: #1d0f2a;
+  color: #FFFFFF;
   font-size: 20px;
 }

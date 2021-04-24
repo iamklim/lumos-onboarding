@@ -12,7 +12,8 @@
   padding-top: 15px;
   padding-bottom: 13px;
   border-radius: 99px;
-  background-color: #0071ff;
+  color: #FFFFFF;
+  background-color: #91B286;
   text-align: center;
   letter-spacing: 1px;
   font-weight: bold;
@@ -81,16 +82,16 @@
   left: 16px;
   bottom: calc(100% - 12px);
   padding: 4px 8px;
-  background: #827791;
+  background: #BDBDBD;
   border-radius: 6px;
   font-weight: 700;
   font-size: 10px;
   line-height: 1.6;
   letter-spacing: 0.01em;
-  color: #ffffff;
+  color: #FFFFFF;
 
   .checkoutCardSelected & {
-    background-image: linear-gradient(180deg, #e20dbe, #e4004f);
+    background: #E6957E;
   }
 }
 
@@ -99,20 +100,20 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background: #4c3b62;
+  background: #F7F9EF;
   border-radius: 8px 0 0 8px;
   border-style: solid;
   border-width: 1px;
-  border-color: #827791;
-  color: #827791;
+  border-color: #E0E0E0;
+  color: #494949;
   font-weight: 800;
   font-size: 16px;
   letter-spacing: 0.5px;
 
   .checkoutCardSelected & {
-    color: #ffffff;
-    background: #292b59;
-    border-color: #0071ff;
+    color: #494949;
+    background: #FFFFFF;
+    border-color: #E6957E;
   }
 }
 
@@ -121,19 +122,19 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background: #4c3b62;
+  background: #F7F9EF;
   border-radius: 0 8px 8px 0;
   border-style: solid;
   border-width: 1px 1px 1px 0;
-  border-color: #827791;
-  color: #827791;
+  border-color: #E0E0E0;
+  color: #494949;
   font-weight: 700;
   font-size: 16px;
 
   .checkoutCardSelected & {
-    color: #ffffff;
-    background: #0071ff;
-    border-color: #0071ff;
+    color: #FFFFFF;
+    background: #E6957E;
+    border-color: #E6957E;
   }
 }
 
@@ -141,17 +142,12 @@
   position: relative;
   border-radius: 14px;
   padding: 12px;
-  background-color: #292b59;
-  background-image: linear-gradient(
-    165deg,
-    rgba(94, 60, 180, 0.5),
-    rgba(94, 60, 180, 0.3)
-  );
+  background-color: #F7F9EF;
   margin-bottom: 40px;
 }
 
 .moneyBackContent {
-  border: 2px solid #45e2ad;
+  border: 2px solid #91B286;
   border-radius: 12px;
   padding: 24px 16px 40px;
 }
@@ -174,5 +170,5 @@
   position: absolute;
   right: 34px;
   bottom: -40px;
-  fill: #45e2ad;
+  fill: #91B286;
 }

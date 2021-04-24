@@ -29,7 +29,11 @@ function ProgressLoader({ start = 0, finish = 100, onFinish, eventName }) {
 
   return (
     <div className="progress-loader">
-      <CircleProgress percentage={progress} strokeWidth={8} />
+      <CircleProgress
+        percentage={progress}
+        strokeWidth={8}
+        primaryColor={["#91B286", "#91B286"]}
+      />
     </div>
   );
 }
