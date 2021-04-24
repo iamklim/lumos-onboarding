@@ -1,16 +1,8 @@
 import "./thank-you.scss";
-import { useStateValue } from "../../state/state";
 import { useEffect } from "react";
 import pushAnalytics from "../../utils/push-analytics";
 
 function ThankYou({ eventName }) {
-  const [
-    {
-      quiz: { name },
-    },
-    ,
-  ] = useStateValue();
-
   useEffect(() => {
     if (eventName) {
       pushAnalytics(eventName);
@@ -20,7 +12,7 @@ function ThankYou({ eventName }) {
   return (
     <div className="thank-you">
       <h1 className="thank-you__title">
-        Dear {name},
+        Dear Friend,
         <br />
         <br />
         We're building <b>LUMOS</b> - a mobile app which helps getting{" "}

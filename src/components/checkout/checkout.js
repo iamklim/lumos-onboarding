@@ -1,17 +1,10 @@
 import "./checkout.scss";
-import { useStateValue } from "../../state/state";
 import { useEffect, useRef, useState } from "react";
 import pushAnalytics from "../../utils/push-analytics";
 import redPanda from "./red-panda.png";
 
 function Checkout({ onSubmit, eventName }) {
   const checkoutCardsRef = useRef(null);
-  const [
-    {
-      quiz: { name },
-    },
-    ,
-  ] = useStateValue();
 
   const [planSelected, setPlanSelected] = useState("1year");
 
@@ -47,7 +40,7 @@ function Checkout({ onSubmit, eventName }) {
         GET MY PLAN
       </button>
       <p className="checkoutText">
-        <strong>Hi, {name}! 👋</strong>
+        <strong>Hi, Friend! 👋</strong>
         <br />
         <br />
         I’m Lumos the Red Panda! A digital friend on your Way to Better You. I’m

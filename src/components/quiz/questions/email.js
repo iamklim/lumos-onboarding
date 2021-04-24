@@ -2,17 +2,10 @@ import { useStateValue } from "../../../state/state";
 import InputQuestion from "../../input-question/input-question";
 
 function TitleText() {
-  const [
-    {
-      quiz: { name },
-    },
-    ,
-  ] = useStateValue();
-
   return (
     <>
-      {name}, please share email to receive your <b>personal plan</b> on how to
-      get sticky habits
+      Please share email to receive your <b>personal plan</b> on how to get
+      sticky habits
     </>
   );
 }

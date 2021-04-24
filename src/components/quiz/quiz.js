@@ -1,7 +1,6 @@
 import "./quiz.scss";
 import Age from "./questions/age";
 import Gender from "./questions/gender";
-import Name from "./questions/name";
 import WakeUp from "./questions/wake-up";
 import LoaderOne from "./questions/loader-one";
 import LoaderTwo from "./questions/loader-two";
@@ -24,22 +23,21 @@ const STEP_TO_QUESTION_MAP = {
   1: <Gender />,
   2: <WakeUp />,
   3: <Age />,
-  4: <Name />,
-  5: <MainGoal />,
-  6: <FocusOnPastOrFuture />,
-  7: <Obstacles />,
-  8: <FitnessLevel />,
-  9: <WorkSchedule />,
-  10: <SleepQuality />,
-  11: <WaterIntake />,
-  12: <BadHabits />,
-  13: <Delays />,
-  14: <LoaderOne />,
-  15: <DayStructure />,
-  16: <LoaderTwo />,
-  17: <Email />,
-  18: <CheckoutScreen />,
-  19: <ThankYouScreen />,
+  4: <MainGoal />,
+  5: <FocusOnPastOrFuture />,
+  6: <Obstacles />,
+  7: <FitnessLevel />,
+  8: <WorkSchedule />,
+  9: <SleepQuality />,
+  10: <WaterIntake />,
+  11: <BadHabits />,
+  12: <Delays />,
+  13: <LoaderOne />,
+  14: <DayStructure />,
+  15: <LoaderTwo />,
+  16: <Email />,
+  17: <CheckoutScreen />,
+  18: <ThankYouScreen />,
 };
 
 function Quiz() {
