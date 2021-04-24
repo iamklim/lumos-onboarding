@@ -64,7 +64,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 144px;
-  min-height: 78px;
+  min-height: 88px;
   cursor: pointer;
 
   &:not(:last-child) {
@@ -85,7 +85,6 @@
   border-radius: 66px;
   font-weight: 700;
   font-size: 14px;
-  letter-spacing: 0.03em;
   color: #FFFFFF;
 
   .checkoutCardSelected & {
@@ -97,22 +96,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 10px;
   background: #F7F9EF;
   border-radius: 12px 0 0 12px;
   border-style: solid;
   border-width: 1px;
   border-color: #E0E0E0;
-  color: #494949;
-  font-weight: 800;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+  line-height: 1.5;
 
   .checkoutCardSelected & {
-    color: #494949;
     background: #FFFFFF;
     border-color: #E6957E;
     box-shadow: 0px 5.69686px 3.41812px rgba(71, 103, 186, 0.15);
+  }
+}
+
+.checkoutCardPeriodTitle {
+  color: #494949;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+
+  .checkoutCardSelected & {
+    color: #494949;
+  }
+}
+
+.checkoutCardPeriodSubtitle {
+  color: #BDBDBD;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+
+  .checkoutCardSelected & {
+    color: #E6957E;
   }
 }
 
@@ -120,21 +137,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 10px;
   background: #F7F9EF;
   border-radius: 0 12px 12px 0;
   border-style: solid;
   border-width: 1px 1px 1px 0;
   border-color: #E0E0E0;
-  color: #494949;
-  font-weight: 700;
-  font-size: 16px;
+  line-height: 1.5;
 
   .checkoutCardSelected & {
-    color: #FFFFFF;
     background: #E6957E;
     border-color: #E6957E;
     box-shadow: 0px 5.69686px 3.41812px rgba(71, 103, 186, 0.15);
+  }
+}
+
+.checkoutCardPriceTitle {
+  color: #494949;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+
+  .checkoutCardSelected & {
+    color: #FFFFFF;
+  }
+}
+
+.checkoutCardPriceSubtitle {
+  color: #494949;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+
+  .checkoutCardSelected & {
+    color: #FFFFFF;
   }
 }
 

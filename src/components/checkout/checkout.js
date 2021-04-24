@@ -19,14 +19,6 @@ function Checkout({ onSubmit, eventName }) {
   const isThreeMonthPlan = planSelected === "3month";
   const isOneMonthPlan = planSelected === "1month";
 
-  const currentDate = new Date();
-  const currentDateFormatted = currentDate
-    .toDateString()
-    .split(" ")
-    .slice(1)
-    .join(" ");
-  const nextYear = currentDate.getFullYear() + 1;
-
   const onTopButtonClick = () => {
     pushAnalytics(`checkout_top_button`);
     checkoutCardsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -55,20 +47,22 @@ function Checkout({ onSubmit, eventName }) {
         GET MY PLAN
       </button>
       <p className="checkoutText">
-        <strong>Hi, {name}!</strong>
+        <strong>Hi, {name}! 👋</strong>
         <br />
         <br />
-        I’m Lumos the Red Panda! A digital friend on your way to better you. I’m
-        here to help you{" "}
-        <b>to build good habits and increase quality of living</b>.
+        I’m Lumos the Red Panda! A digital friend on your Way to Better You. I’m
+        here to help you <b>
+          Build good Habits and Increase Quality of Living
+        </b>{" "}
+        🚀
         <br />
         <br />
-        It’s the time to make first steps to future you! I believe you have a
-        strong personality and can start changing right now with your{" "}
-        <b>personalized plan</b>.
+        It’s the time to make First Steps to Future You! 💎 I believe you have a
+        strong Personality and can start Changing Right Now with your{" "}
+        <b>Personalized Plan</b> 🙌
         <br />
         <br />
-        <b>Let’s start this journey together!</b>
+        <b>Let’s start this journey together!</b> 👇
       </p>
       <div className="checkoutCards" ref={checkoutCardsRef}>
         <h2 className="checkoutCardsTitle">Choose your plan</h2>
@@ -77,24 +71,42 @@ function Checkout({ onSubmit, eventName }) {
           className={isOneYearPlan ? "checkoutCardSelected" : "checkoutCard"}
           onClick={() => onPlanSelect("1year")}
         >
-          <div className="checkoutCardLabel">Save 50%</div>
-          <div className="checkoutCardPeriod">1 YEAR PLAN</div>
-          <div className="checkoutCardPrice">$39.99</div>
+          <div className="checkoutCardLabel">Save 45%</div>
+          <div className="checkoutCardPeriod">
+            <p className="checkoutCardPeriodTitle">1 YEAR PLAN</p>
+            <p className="checkoutCardPeriodSubtitle">39.99 USD</p>
+          </div>
+          <div className="checkoutCardPrice">
+            <p className="checkoutCardPriceTitle">$0.11</p>
+            <p className="checkoutCardPriceSubtitle">per day</p>
+          </div>
         </div>
         <div
           className={isThreeMonthPlan ? "checkoutCardSelected" : "checkoutCard"}
           onClick={() => onPlanSelect("3month")}
         >
           <div className="checkoutCardLabel">Save 25%</div>
-          <div className="checkoutCardPeriod">3 MONTH PLAN</div>
-          <div className="checkoutCardPrice">$14.99</div>
+          <div className="checkoutCardPeriod">
+            <p className="checkoutCardPeriodTitle">3 Months</p>
+            <p className="checkoutCardPeriodSubtitle">12.99 USD</p>
+          </div>
+          <div className="checkoutCardPrice">
+            <p className="checkoutCardPriceTitle">$1.08</p>
+            <p className="checkoutCardPriceSubtitle">per week</p>
+          </div>
         </div>
         <div
           className={isOneMonthPlan ? "checkoutCardSelected" : "checkoutCard"}
           onClick={() => onPlanSelect("1month")}
         >
-          <div className="checkoutCardPeriod">1 MONTH PLAN</div>
-          <div className="checkoutCardPrice">$4.99</div>
+          <div className="checkoutCardPeriod">
+            <p className="checkoutCardPeriodTitle">1 Month</p>
+            <p className="checkoutCardPeriodSubtitle">5.99 USD</p>
+          </div>
+          <div className="checkoutCardPrice">
+            <p className="checkoutCardPriceTitle">$1.5</p>
+            <p className="checkoutCardPriceSubtitle">per week</p>
+          </div>
         </div>
       </div>
 
