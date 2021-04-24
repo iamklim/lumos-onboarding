@@ -1,6 +1,6 @@
 {
-  "homepage": "https://iamklim.github.io/lumos-onboarding",
-  "name": "lumos-onboarding",
+  "homepage": "https://iamklim.github.io",
+  "name": "lumos-quiz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
