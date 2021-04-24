@@ -1,6 +1,5 @@
 import { useStateValue } from "../../../state/state";
 import InputQuestion from "../../input-question/input-question";
-import SingleSelectQuestion from "../../single-select-question/single-select-question";
 
 function Name() {
   const [
