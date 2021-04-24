@@ -51,6 +51,9 @@ function Checkout({ onSubmit, eventName }) {
   return (
     <div className="checkout">
       <img className="checkoutImage" src={redPanda} alt="Red Panda" />
+      <button className="checkoutButton" onClick={onTopButtonClick}>
+        GET MY PLAN
+      </button>
       <p className="checkoutText">
         <strong>Hi, {name}!</strong>
         <br />
@@ -62,14 +65,11 @@ function Checkout({ onSubmit, eventName }) {
         <br />
         It’s the time to make first steps to future you! I believe you have a
         strong personality and can start changing right now with your{" "}
-        <b>personal plan</b>.
+        <b>personalized plan</b>.
         <br />
         <br />
         <b>Let’s start this journey together!</b>
       </p>
-      <button className="checkoutButton" onClick={onTopButtonClick}>
-        GET MY PLAN
-      </button>
       <div className="checkoutCards" ref={checkoutCardsRef}>
         <h2 className="checkoutCardsTitle">Choose your plan</h2>
 

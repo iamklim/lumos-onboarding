@@ -26,7 +26,7 @@ function FitnessLevel() {
       answerOptions={[
         { title: "3 to 5 times a week", value: "3_5", icon: "🏅" },
         { title: "1 to 2 workouts a week", value: "1_2", icon: "👟" },
-        { title: "I’m just getting in the groove", value: "rare", icon: "🦦" },
+        { title: "I’m just getting in the groove", value: "rare", icon: "🦥" },
       ]}
       onClick={onClick}
       eventName="quiz_fitness_level"
