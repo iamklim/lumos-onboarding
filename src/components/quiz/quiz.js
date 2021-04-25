@@ -11,7 +11,6 @@ import FocusOnPastOrFuture from "./questions/focus-on-past-or-future";
 import Obstacles from "./questions/obstacles";
 import FitnessLevel from "./questions/fitness-level";
 import WorkSchedule from "./questions/work-schedule";
-import SleepQuality from "./questions/sleep-quality";
 import WaterIntake from "./questions/water-intake";
 import BadHabits from "./questions/bad-habits";
 import Delays from "./questions/delays";
@@ -28,16 +27,15 @@ const STEP_TO_QUESTION_MAP = {
   6: <Obstacles />,
   7: <FitnessLevel />,
   8: <WorkSchedule />,
-  9: <SleepQuality />,
-  10: <WaterIntake />,
-  11: <BadHabits />,
-  12: <Delays />,
-  13: <LoaderOne />,
-  14: <DayStructure />,
-  15: <LoaderTwo />,
-  16: <Email />,
-  17: <CheckoutScreen />,
-  18: <ThankYouScreen />,
+  9: <WaterIntake />,
+  10: <BadHabits />,
+  11: <Delays />,
+  12: <LoaderOne />,
+  13: <DayStructure />,
+  14: <LoaderTwo />,
+  15: <Email />,
+  16: <CheckoutScreen />,
+  17: <ThankYouScreen />,
 };
 
 function Quiz() {
